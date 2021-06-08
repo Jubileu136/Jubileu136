@@ -1,0 +1,56 @@
+from time import sleep
+from math import sqrt
+#calculadora incompleta
+print('''Você vai fazer uma operação aritmética
+entre dois números,''')
+sleep(1.5)
+while True:    
+    print('''Abaixo tem uma tabela de
+operadores aritméticos''')
+    sleep(1.5)
+    print('''+ (para somar) 
+- (para subtrair)
+* (para multiplicar)
+/ (para dividir)
+** (para potencializar)
+V (para raiz quadrada)
+// (para divisão inteira)
+% (para o resto da divisão)
+/sair(para sair da calculadora) ''')
+    sleep(5)
+    a = str(input("Qual comando vai escolher?"))
+    sleep(1.5)
+    if a == '/sair':
+        break
+    b = float(input("Qual o primeiro número?"))
+    sleep(1.5)
+    c = float(input("E o segundo número?"))
+    sleep(1.5)
+    print("calculando...%")
+    sleep(3)
+    if a == '+':
+        d = b + c
+        print("A soma entre {} e {} é {}".format(b,c,d))
+    if a == '-':
+        d = b - c
+        print("A subtração de {} por {} é {}".format(b,c,d))
+    elif a == '*':
+        d = b * c
+        print(" O produto de {} multiplicado por {} é {}".format(b,c,d))
+    elif a == '/':
+        d = b / c
+        print("O resultado da divisão de {} por {} É {}".format(b,c,d))
+    elif a == '**':
+        d = b ** c
+        print("{} elevado a {} é igual a {}".format(b,c,d))
+    elif a == 'V':
+        d = sqrt(b)
+        e = sqrt(c)
+        print("A raiz quadrada de {} é {}".format(b,d))
+        print("E a raiz de {} é {}".format(c,e))
+    elif a == '//':
+        d = b // c
+        print("A divisão inteira entre {} e {} é {}".format(b,c,d))
+    elif a == '%':
+        d = b % c
+        print("O resto da divisão inteira entre {} e {} é {}".format(b,c,d))
